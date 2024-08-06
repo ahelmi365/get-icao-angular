@@ -1,1 +1,40 @@
-<p>icao works!</p>
+<section class="icao-container">
+  <h2>Angular App - ICAO WC</h2>
+
+  <!-- button to open the modal -->
+  <section class="btns">
+    <button
+      class="btn btn-primary"
+      id="open-icao-modal"
+      name="open-icao-modal"
+      type="button"
+    >
+      Open ICAO Modal
+    </button>
+
+    <!-- button to log the captured image src  -->
+    <button
+      class="btn btn-success ms-4"
+      id="open-icao-modal"
+      name="open-icao-modal"
+      type="button"
+      (click)="handleLogImgBtn()"
+    >
+      Log image Src
+    </button>
+  </section>
+
+  <!-- Placeholder to show the saved image from icao wc -->
+  <div class="result-image card">
+    <img id="icao-result-image" src="" alt="" width="200px" />
+  </div>
+
+  <!-- Using custom component -->
+  <get-icao-checker-wc
+    isICAOWC="{true}"
+    openModalElmId="open-icao-modal"
+    savedImageElmId="icao-result-image"
+    [getImgSrc]="this.setSavedImgSrc"
+    language="es"
+  ></get-icao-checker-wc>
+</section>

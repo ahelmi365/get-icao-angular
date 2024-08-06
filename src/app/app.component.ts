@@ -6,7 +6,9 @@ import { IcaoComponent } from './icao/icao.component';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, IcaoComponent],
-  templateUrl: './app.component.html',
+  template: ` <main class="container mt-4">
+    <app-icao />
+  </main>`,
   styleUrl: './app.component.css',
 })
 export class AppComponent {
